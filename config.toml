@@ -31,17 +31,17 @@ customJs = ["js/blog.js"]
   [[params.socialIcons]]
   icon = "fa-linkedin"
   title = "Linkedin"
-  url = "#"
+  url = "https://www.linkedin.com/in/nfisk/"
 
   [[params.socialIcons]]
   icon = "fa-github"
   title = "GitHub"
-  url = "#"
+  url = "https://github.com/thefisk"
 
   [[params.socialIcons]]
   icon = "fa-twitter"
   title = "Twitter"
-  url = "#"
+  url = "https://twitter.com/thisisfisk/"
 
 [menu]
 
