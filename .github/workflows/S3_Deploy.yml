@@ -1,25 +1,23 @@
-name: github pages
+name: Hugo S3
 
 on:
   push:
-    branches:
-      - main 
+    branches: [ main ]
   pull_request:
+    branches: [ main ]
 
 jobs:
-  Build_and_Deploy:
-      runs-on: ubuntu-18.04
-      steps:
-      - uses: actions/checkout@v2
+  build:
+    
+    runs-on: ubuntu-latest
 
-      - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-          hugo-version: '0.63.2'
-      - name: Build
-      run: hugo --minify
-      - name: Deploy to S3
-        run: hugo deploy --force --maxDeletes -1 --invalidateCDN
+    steps:
+      - name: Check out main
+        uses: actions/checkout@main
+          
+      - name: Deploy site
+        uses: plopcas/hugo-s3-action@v1.3.0
         env:
-          AWS_ACCESS_KEY_ID: $
-          AWS_SECRET_ACCESS_KEY: $
+          AWS_REGION: 'eu-west-2'
+          AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.ACCESS_KEY_SECRET }}
