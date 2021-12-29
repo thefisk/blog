@@ -1,4 +1,4 @@
-baseURL = "http://nathanfisk.co.uk.s3-website.eu-west-2.amazonaws.com"
+baseURL = "https://nathanfisk.co.uk"
 languageCode = "en-gb"
 title = "Nathan Fisk"
 theme = "soho_fork"
