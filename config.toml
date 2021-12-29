@@ -16,7 +16,7 @@ DisableShare = true
 # gravatar = "soho@example.com"
 profilePicture = "images/profile.png"
 
-copyright = "Author Name"
+copyright = "Nathan Fisk"
 license = "CC BY-SA 4.0"
 licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
 
