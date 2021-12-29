@@ -18,7 +18,8 @@ jobs:
           tar xvzf hugo_extended_0.91.2_Linux-64bit.tar.gz hugo
           mv hugo $HOME/hugo
         env:
-          HUGO_VERSION: 0.85.0
+          HUGO_VERSION: 0.91.2
+          AWS_EC2_METADATA_DISABLED: true
       - name: Hugo Build
         run: $HOME/hugo -v
       - name: Deploy to S3
