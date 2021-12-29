@@ -15,7 +15,7 @@ jobs:
       - name: Install Hugo
         run: |
           wget https://github.com/gohugoio/hugo/releases/download/v0.91.2/hugo_extended_0.91.2_Linux-64bit.tar.gz
-          tar xvzf ${HUGO_DOWNLOAD} hugo
+          tar xvzf hugo_extended_0.91.2_Linux-64bit.tar.gz hugo
           mv hugo $HOME/hugo
         env:
           HUGO_VERSION: 0.85.0
