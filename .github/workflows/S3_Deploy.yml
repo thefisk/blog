@@ -12,18 +12,21 @@ jobs:
     # Doesn't use latest Ubuntu as it breaks S3 sync command
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout Repos
+          uses: actions/checkout@v1
+          with:
+            submodules: 'true'
       - name: Install Hugo
-        run: |
-          wget https://github.com/gohugoio/hugo/releases/download/v0.91.2/hugo_extended_0.91.2_Linux-64bit.tar.gz
-          tar xvzf hugo_extended_0.91.2_Linux-64bit.tar.gz hugo
-          mv hugo $HOME/hugo
-        env:
-          HUGO_VERSION: 0.91.2
+          run: |
+            wget https://github.com/gohugoio/hugo/releases/download/v0.91.2/hugo_extended_0.91.2_Linux-64bit.tar.gz
+            tar xvzf hugo_extended_0.91.2_Linux-64bit.tar.gz hugo
+            mv hugo $HOME/hugo
+          env:
+            HUGO_VERSION: 0.91.2
       - name: Hugo Build
-        run: $HOME/hugo -v
+          run: $HOME/hugo -v
       - name: Deploy to S3
-        run: aws s3 sync public/ s3://nathanfisk.co.uk/ --delete
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          run: aws s3 sync public/ s3://nathanfisk.co.uk/ --delete
+          env:
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
