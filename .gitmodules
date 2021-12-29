@@ -3,4 +3,4 @@
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
 [submodule "themes/soho_fork"]
 	path = themes/soho_fork
-	url = https://github.com/alexandrevicenzi/soho.git
+	url = https://github.com/thefisk/soho.git
