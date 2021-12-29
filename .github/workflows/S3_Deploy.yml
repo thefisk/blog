@@ -9,7 +9,8 @@ on:
 jobs:
   build:
     name: Build and Deploy
-    runs-on: ubuntu-latest
+    # Doesn't use latest Ubuntu as it breaks S3 sync command
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
       - name: Install Hugo
@@ -19,7 +20,6 @@ jobs:
           mv hugo $HOME/hugo
         env:
           HUGO_VERSION: 0.91.2
-          AWS_EC2_METADATA_DISABLED: true
       - name: Hugo Build
         run: $HOME/hugo -v
       - name: Deploy to S3
