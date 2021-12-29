@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://nathanfisk.co.uk/"
 languageCode = "en-gb"
 title = "Nathan Fisk"
 theme = "soho_fork"
