@@ -1,7 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-gb"
 title = "Nathan Fisk"
-theme = "soho"
+theme = "soho_orig"
 enableInlineShortcodes = true
 
 summarylength = 10
