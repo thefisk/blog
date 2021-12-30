@@ -1,10 +1,10 @@
 ---
 title: "Creating a Hugo blog with S3 and Cloudflare"
 date: 2021-12-30T14:31:46Z
-draft: true
+draft: false
 tags: ["Hugo"]
 ---
-> How I made this blog and why...
+> How I made this blog and why I made some of the choices I did...
 
 When creating this blog, I came across many conflicting articles, particularly related to how to set up CI/CD for publishing updates to S3 and how best to use a CDN. I wanted to use this post to jot down what I ended up doing, and why.
 
@@ -22,4 +22,20 @@ Luckily, none of this madness was needed because with Cloudflare, all I had to d
 
 ### Automated Deployment
 
-This blog is hosted on a public Git repository on GitHub and as such, I have included a YAML file that will run a Hugo build process when an update is pushed to the main branch, and then deploy the resulting static files to my S3 bucket.
+This blog is hosted on a public Git repository on GitHub and as such, I have included a YAML file that will run a Hugo build process when an update is pushed to the main branch, and then deploy the resulting static files to my S3 bucket. I did have a few minor issues getting this to work which I have added comments in the YAML file below to address. A big one though which showed up in a lot of Google searches was caused by having my selected theme as a submodule in Git. By default, the checkout process won't add submodules so a lot of the files simply weren't generated. This was fixed by adding the setting on line 19.
+
+{{< gist thefisk 7432eb4d478d90a34127571692da8ae0 >}}
+
+### TLS
+
+To get TLS working when hosting on S3, you have to use Cloudflare's Flexible option, as shown below.  'Full' is not possible because you can't host a certificate on S3.  But as we're using Cloudflare as a CDN, the end user's session is always encrypted and, as for my very small static site, it honestly doesn't need end-to-end encryption between Cloudflare and S3.
+
+![Cloudflare TLS Settings](/img/cloudflare_tls.png)
+
+### Extra Bits
+
+There are some extra things like making sure the S3 is publicly accessible and locking it down to the Cloudflare IP addresses, but all of that stuff is readily available at sources far more reputable than this.
+
+### The Result
+
+So, now it's all up and running, posting updates is as easy as creating a new markdown page and pushing up to GitHub. I can rest safe in the knowledge that the site should be nice and fast, thanks to Hugo and Cloudflare, and extremely easy on the wallet. :blush:
