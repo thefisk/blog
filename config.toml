@@ -52,6 +52,12 @@ customJs = ["js/blog.js"]
   url = "/posts/"
 
   [[menu.main]]
+  name = "Tags"
+  identifier = "tags"
+  weight = 200
+  url = "/tags/"
+
+  [[menu.main]]
   name = "About"
   identifier = "about"
   weight = 300
