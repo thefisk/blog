@@ -15,6 +15,7 @@ jobs:
       - name: Checkout Repos
         uses: actions/checkout@v1
         with:
+          # Submodules added to allow build to access theme files
           submodules: 'true'
       - name: Install Hugo
         run: |
