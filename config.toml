@@ -6,12 +6,12 @@ enableInlineShortcodes = true
 
 summarylength = 10
 enableEmoji = true
+disqusShortname = 'nathanfisk'
 
 [params]
 author = "Nathan Fisk"
 description = "Doer of Things"
 DisableShare = true
-
 ## Set one of:
 # gravatar = "soho@example.com"
 profilePicture = "images/profile.png"
