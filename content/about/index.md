@@ -2,6 +2,7 @@
 title: "About"
 date: 2021-12-23T11:11:45Z
 draft: false
+disable_comments: true
 ---
 
 > Who is this guy?
