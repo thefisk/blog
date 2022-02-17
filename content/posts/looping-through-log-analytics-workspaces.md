@@ -14,7 +14,7 @@ Often in the world of Azure though, it useful to script things to make your life
 
 ### The Problem
 
-That was the case when I recently wanted to loop through various Log Analytics Workspaces.  I wanted to use the [az monitor log-analytics query](https://docs.microsoft.com/en-us/cli/azure/monitor/log-analytics?view=azure-cli-latest#az-monitor-log-analytics-query) command but this requires knowing the GUID of every single LAW.  In a large enterprise environment you will likely have naming standards for things like your LAWs and your Resource Groups that you can either provide in a list or enumerate with string interpolation.  But doing so for a GUID is obviously a kettle of fish.
+That was the case when I recently wanted to loop through various Log Analytics Workspaces.  I wanted to use the [az monitor log-analytics query](https://docs.microsoft.com/en-us/cli/azure/monitor/log-analytics?view=azure-cli-latest#az-monitor-log-analytics-query) command but this requires knowing the GUID of every single LAW.  In a large enterprise environment you will likely have naming standards for things like your LAWs and your Resource Groups that you can either provide in a list or enumerate with string interpolation.  But doing so for a GUID is obviously a different kettle of fish.
 
 In the image below, the argument we need to pass in for --workspace is "982a8281-cccd-49bb-aae9-af0a7b7c4806".  But how do we find that, programmatically?
 
