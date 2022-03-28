@@ -1,7 +1,7 @@
 ---
 title: "Azure Management Api | Part One"
 date: 2022-03-22T16:59:08Z
-draft: true
+draft: false
 ---
 
 This guide will show you how to set up credentials for using the Azure Management API in order to make some basic read and update requests.  A follow up guide will run through using the API using Postman.
