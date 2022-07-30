@@ -45,4 +45,6 @@ The very first thing to do is to create an App Registration, this will act as th
 
 At this point we have a working set of credentials that will have permissions to perform CRUD operations on our subscription.
 
-In part 2, we'll look at using these credentials with Postman as our API client.
+In [part 2](../azure-management-api-2.md), we'll look at using these credentials with Postman as our API client.
+
+_part 2 live as of 30/07/2022_
