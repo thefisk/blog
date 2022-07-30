@@ -70,4 +70,4 @@ The screenshot below shows me taking the output of my previous request and simpl
 ---
 ### That's About It
 
-Once you know the process, it's not reallyy super complicated and knowing how this all works can be really quite useful when it comes to getting a deeper understanding of things like Az Cli and Terraform, which are essentially (quite fancy) Python and Go wrappers for the API.
+Once you know the process, it's not really super complicated and knowing how this all works can be really quite useful when it comes to getting a deeper understanding of things like Az Cli and Terraform, which are essentially (quite fancy) Python and Go wrappers for the API.
