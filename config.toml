@@ -10,7 +10,7 @@ disqusShortname = 'nathanfisk'
 
 [params]
 author = "Nathan Fisk"
-description = "Head in the Cloud"
+description = "Head in the Cloud ☁️"
 DisableShare = true
 ## Set one of:
 # gravatar = "soho@example.com"
@@ -38,10 +38,10 @@ customJs = ["js/blog.js"]
   title = "GitHub"
   url = "https://github.com/thefisk"
 
-  [[params.socialIcons]]
-  icon = "fa-twitter"
-  title = "Twitter"
-  url = "https://twitter.com/thisisfisk/"
+  # [[params.socialIcons]]
+  # icon = "fa-twitter"
+  # title = "Twitter"
+  # url = "https://twitter.com/thisisfisk/"
 
 [menu]
 
