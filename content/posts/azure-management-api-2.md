@@ -2,6 +2,7 @@
 title: "Azure Management Api | Part Two"
 date: 2022-07-30T08:35:30+01:00
 draft: false
+tags: ["Azure"]
 ---
 
 In [part one](../azure-management-api) of my guide, we set up an app registration within the Azure Portal for us to use as the authenticated set of credentials for managing Azure resources via the management API.
@@ -30,7 +31,7 @@ You'll need to find your tenantId from AzureAD and populate that.  Next, create 
 
 In [part one](../azure-management-api) of this guide we created our App Registration and saved our Client Id and Client Secret.  This pairing is what we will use to request an Access Token from Azure.  This can be confusing at first because you might think the pairing is analogous to a traditional interactive username/password pairing.  In reality though, it's only used here to obtain a short lived Access Token.  For that reason, setting up this first request is the first _real_ stage in our API request flow.
 
-To obtain the Access Token, you'll need to send a POST request to the endpoint https://login.microsoftonline.com/{{tenantId}}/oauth2/token where '{{tenantId}}' is the tenantId variable we set up in our environment previously.
+To obtain the Access Token, you'll need to send a POST request to the endpoint `https://login.microsoftonline.com/{{tenantId}}/oauth2/token` where `{{tenantId}}` is the tenantId variable we set up in our environment previously.
 
 This endpoint will expect x-www-form-urlencoded data with four key:value pairs.  Two of these are our Client ID and Secret, the others are the 'grant_type' and 'resource' types.  For our purposes, these are 'client_credentials' and 'https://management.azure.com/' respectively.
 
@@ -46,7 +47,7 @@ In the second screenshot, I am selecting the value of the 'access_token' and set
 ---
 ### Third Step: Get a Resource
 
-Now we have our Access Token set up we can make some requests.  To start, the easiest thing to do is to get the details of a resource.  This is done by sending a GET request to the endpoint https://management.azure.com/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/{resourceNameSpace}/{resourceType}/{resourceName}
+Now we have our Access Token set up we can make some requests.  To start, the easiest thing to do is to get the details of a resource.  This is done by sending a GET request to the endpoint `https://management.azure.com/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/{resourceNameSpace}/{resourceType}/{resourceName}`
 
 One parameter you do need to specify is the api-version.  This can be found by checking the 'JSON View' of your resource.
 
@@ -71,3 +72,5 @@ The screenshot below shows me taking the output of my previous request and simpl
 ### That's About It
 
 Once you know the process, it's not really super complicated and knowing how this all works can be really quite useful when it comes to getting a deeper understanding of things like Az Cli and Terraform, which are essentially (quite fancy) Python and Go wrappers for the API.
+
+---

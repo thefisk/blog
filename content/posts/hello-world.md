@@ -11,3 +11,5 @@ Well, I've been meaning to start a blog for some time as throughout the last few
 I'm not planning for this to be bursting at the brim with content, but hopefully maybe one post will prove helpful to someone somewhere, even if it's just as a reminder to myself :grinning:
 
 At the very least, it's got me to learn how to use Hugo and deploy to S3.
+
+---
