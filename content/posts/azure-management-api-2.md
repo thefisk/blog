@@ -51,9 +51,9 @@ In the second screenshot, I am selecting the value of the 'access_token' and set
 
 Now we have our Access Token set up we can make some requests.  To start, the easiest thing to do is to get the details of a resource.  This is done by sending a GET request to the endpoint `https://management.azure.com/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/{resourceNameSpace}/{resourceType}/{resourceName}`
 
-One parameter you do need to specify is the api-version.  This can be found by checking the 'JSON View' of your resource.
+One parameter you do need to specify is the api-version.  This can be found by checking the 'JSON View' of your resource in the Azure Portal.
 
-Below we can see my set up, including response.  I have hardcoded the entire URL but you could just as easily you environment variables again.
+Below we can see my set up, including response.  I have hardcoded the entire URL but you could just as easily use environment variables again.
 
 ![Getting a Resource](/img/API2_04_Get_Resource.png)
 
