@@ -1,7 +1,9 @@
 ---
-title: "Debugging the Azurerm Terraform Provider"
+title: "Debugging the AzureRM Terraform Provider"
 date: 2022-08-01T19:07:56+01:00
 draft: false
+description: "How to get started with debugging the AzureRM Terraform provider with VSCode"
+keywords: ["Terraform", "AzureRM", "Debugging", "VSCode"]
 tags: ["Terraform", "Azure", "Go"]
 ---
 
@@ -25,7 +27,7 @@ Terraform, and Terraform providers, are written in Go.  So the first thing you'l
 
 Firstly, we'll need to clone the [AzureRM repo](https://github.com/hashicorp/terraform-provider-azurerm/) locally (kind of a pre-req for any debugging).  Optionally, you can set the flag 'debuggable' to default to _true_ by changing the value on [line 18](https://github.com/hashicorp/terraform-provider-azurerm/blob/da8cd028f437022963fb009478a9ebbd3ec06e3a/main.go#L18) of main.go.
 
-Once that is done, it will need to be compiled with some special flags.  To do so, make sure you're in the root directory of the source code and run ther below command.
+Once that is done, it will need to be compiled with some special flags.  To do so, make sure you're in the root directory of the source code and run the below command.
 
 `go build -gcflags="all=-N -l"`
 

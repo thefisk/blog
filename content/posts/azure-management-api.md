@@ -2,6 +2,8 @@
 title: "Azure Management Api | Part One"
 date: 2022-03-22T16:59:08Z
 draft: false
+description: "How to create an Enterprise Application in readiness for use with the Azure Management API"
+keywords: ["Azure", "API", "Enterprise Applications"]
 tags: ["Azure"]
 ---
 

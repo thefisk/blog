@@ -2,6 +2,8 @@
 title: "Creating a Hugo blog with S3 and Cloudflare"
 date: 2021-12-30T14:31:46Z
 draft: false
+description: "How I created this blog with Hugo, S3, and Cloudflare"
+keywords: ["Hugo", "Amazon S3", "AWS", "Blog", "Cloudflare", "DNS"]
 tags: ["Hugo"]
 ---
 > How I made this blog and why I made some of the choices I did...

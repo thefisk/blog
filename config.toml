@@ -11,6 +11,8 @@ disqusShortname = 'nathanfisk'
 [params]
 author = "Nathan Fisk"
 description = "Head in the Cloud ☁️"
+longdescription = "The blog of Nathan Fisk where I post on topics such as Azure, Terraform, Golang, and Django"
+mainkeywords = ["Nathan Fisk", "Blog", "Azure", "Terraform", "Go", "Golang", "Django"]
 DisableShare = true
 ## Set one of:
 # gravatar = "soho@example.com"
@@ -138,3 +140,8 @@ gzip = true
 [[deployment.matchers]]
 pattern = "^.+\\.(html|xml|json)$"
 gzip = true
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5

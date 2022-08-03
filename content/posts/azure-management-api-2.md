@@ -2,6 +2,8 @@
 title: "Azure Management Api | Part Two"
 date: 2022-07-30T08:35:30+01:00
 draft: false
+description: "How to get started with the Azure Management API using Postman"
+keywords: ["Azure", "API", "Postman"]
 tags: ["Azure"]
 ---
 

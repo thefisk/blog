@@ -3,6 +3,8 @@ title: "Storage Account Public Access: Terraform Oddity"
 date: 2022-02-17T20:27:34Z
 draft: false
 tags: ["Terraform", "Azure"]
+description: "Odd behaviour with the AzureRM Terraform provider"
+keywords: ["Azure", "Terraform", "Storage Accounts", "AzureRM", "Blob Public Access"]
 ---
 
 > When things don't go quite as you expect

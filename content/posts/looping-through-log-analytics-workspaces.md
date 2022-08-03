@@ -3,6 +3,8 @@ title: "Looping Through Log Analytics Workspaces"
 date: 2022-01-19T09:48:30Z
 draft: false
 tags: ["Azure", "Scripting"]
+description: "How to loop through various Log Analytics Workspaces Programmatically"
+keywords: ["Azure", "Log Analytics", "LAW", "PowerShell", "Scripting"]
 ---
 > Using the AZ Monitor Log-Analytics Query command to script queries
 

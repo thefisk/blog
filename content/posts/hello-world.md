@@ -2,6 +2,8 @@
 title: "Hello World"
 date: 2021-12-23T10:38:45Z
 draft: false
+description: "An introduction to this blog"
+keywords: ["Blog", "About Me", "Nathan Fisk"]
 ---
 
 > What's all this about then?
