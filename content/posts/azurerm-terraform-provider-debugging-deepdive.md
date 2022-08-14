@@ -1,7 +1,7 @@
 ---
 title: "Azurerm Terraform Provider Debugging Deepdive"
 date: 2022-08-05T08:02:26+01:00
-draft: true
+draft: false
 description: "Debugging an issue in the AzureRM Terraform provider: a step-by-step guide"
 keywords: ["Debugging", "Go", "Golang", "Terraform", "AzureRM"]
 tags: ["Terraform", "Go", "Debugging", "Azure"]
@@ -114,7 +114,33 @@ Continuing a couple of lines further confirms that virtualMachineProfile.Storage
 ---
 ### Comparing Behaviour with Other Resource Types
 
+Given that these config parameters, virtualMachineProfile.StorageProfile, are common among other resource types, I thought I'd look to see how this functionality was implemented in them.
+
+I chose the [azurerm_linux_virtual_machine_scale_set](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine_scale_set) resource as it's more or less the same resource (it's a uniform orchestration VMSS vs a flexible VMSS).  
+
+The resource's create function is held in [linux_virtual_machine_scale_set_resource.go](https://github.com/hashicorp/terraform-provider-azurerm/blob/5fd32b3b3cf8a4a1891dee79e8890a125a2f36ce/internal/services/compute/linux_virtual_machine_scale_set_resource.go) and we can see a call to a similar, but differently named function, `expandSourceImageReference()`, on [line 566](https://github.com/hashicorp/terraform-provider-azurerm/blob/5fd32b3b3cf8a4a1891dee79e8890a125a2f36ce/internal/services/compute/linux_virtual_machine_scale_set_resource.go#L566).  This function is clearly written differently to expandOrchestratedSourceImageReference() though as it returns two things (we can see this from the assignment): -
+
+`sourceImageReference, err := expandSourceImageReference(sourceImageReferenceRaw, sourceImageId)`
+
+This function is held on line [401 of shared_schema.go](https://github.com/hashicorp/terraform-provider-azurerm/blob/5fd32b3b3cf8a4a1891dee79e8890a125a2f36ce/internal/services/compute/shared_schema.go#L401) and handles cases of blank `source_image_id` and `source_image_reference` much better, only returning an error if both are blank: -
+
+![expandSourceImageReference](/img/ExpandSourceImageReference.png)
+
+This feels like the correct way to populate the `sourceImageReference`.
+
+---
+### Testing a Fix
+
+It seemed to me that the sensible thing to do would be to replace the fault function call within _orchestrated_virtual_machine_scale_set_resource.go_ with a call to `expandSourceImageReference()` within _shared_schema.go_  and include the same error handling as we saw for the Linux VMSS resource (remember, the original function call only returned an ImageReference type, not an error as well).
+
+I did this on commit [19cb84f of my fork](https://github.com/hashicorp/terraform-provider-azurerm/commit/19cb84f2f0c43fd26ee98fb65c7b27e9d1bb16a0) of the provider repo, recompiled the source code, started it back up in debug mode, and is if by magic, Terraform was able to populate the missing object for the JSON request body, and created my Flexible VMSS without a hitch!
+
+---
+### End Result
+
+I added a detailed write-up of my findings on the GitHub issue [here](https://github.com/hashicorp/terraform-provider-azurerm/issues/14820) and opened a Pull Request to try and get the fix live.  One of the maintainers at Hashicorp replied, ratifying the fix, and added it into a larger PR for VMSSs as [commit ed6a95d](https://github.com/hashicorp/terraform-provider-azurerm/commit/ed6a95d66237685a65adfe44e522b351eef96cb9), which also removes the redundant `expandOrchestratedSourceImageReference()` function.
+
 ---
 ### In Summary
 
-Like I said at the outset, the amount of time an issue has been open doesn't correlate to its complexity, so why not crack open the source code and get involved?
+Like I said at the outset, the amount of time an issue has been open doesn't necessarily correlate to its complexity, so why not crack open the source code and get involved?  The issue had been open on GitHub for over half a year and all in all it probably took me an hour or two of debugging it to find root cause and create a fix.  In fact, putting this post together took a lot longer!  I'm sure not all issues will be this easy to resolve, but it's a great way to get to know how Terraform providers work and have some fun getting your hands dirty
