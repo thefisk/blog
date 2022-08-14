@@ -138,7 +138,7 @@ I did this on commit [19cb84f of my fork](https://github.com/hashicorp/terraform
 ---
 ### End Result
 
-I added a detailed write-up of my findings on the GitHub issue [here](https://github.com/hashicorp/terraform-provider-azurerm/issues/14820) and opened a Pull Request to try and get the fix live.  One of the maintainers at Hashicorp replied, ratifying the fix, and added it into a larger PR for VMSSs as [commit ed6a95d](https://github.com/hashicorp/terraform-provider-azurerm/commit/ed6a95d66237685a65adfe44e522b351eef96cb9), which also removes the redundant `expandOrchestratedSourceImageReference()` function.
+I added a detailed write-up of my findings on the GitHub issue [here](https://github.com/hashicorp/terraform-provider-azurerm/issues/14820#issuecomment-1197993877) and opened a Pull Request to try and get the fix live.  One of the maintainers at Hashicorp replied, ratifying the fix, and added it into a larger PR for VMSSs as [commit ed6a95d](https://github.com/hashicorp/terraform-provider-azurerm/commit/ed6a95d66237685a65adfe44e522b351eef96cb9), which also removes the redundant `expandOrchestratedSourceImageReference()` function.
 
 ---
 ### In Summary
