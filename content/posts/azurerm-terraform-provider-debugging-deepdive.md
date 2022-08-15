@@ -1,7 +1,7 @@
 ---
 title: "Azurerm Terraform Provider Debugging Deepdive"
 date: 2022-08-05T08:02:26+01:00
-draft: false
+draft: true
 description: "Debugging an issue in the AzureRM Terraform provider: a step-by-step guide"
 keywords: ["Debugging", "Go", "Golang", "Terraform", "AzureRM"]
 tags: ["Terraform", "Go", "Debugging", "Azure"]
