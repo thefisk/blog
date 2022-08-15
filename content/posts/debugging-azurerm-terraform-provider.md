@@ -40,7 +40,7 @@ Debugging can be done in numerous ways.  With compiled code though, we can eithe
 
 {{< gist thefisk a3d9fddbc05daa80a399a6069450429d >}}
 
-By specifying a target TCP port, we can just run Delve (in step 6) with the same port as a param and know they should connect fine.  I had some issues with apiVersion 1, so I'm using v2 here.  showLog and trace just adds some output on the debug process to the Debug Console within VSCode.
+By specifying a target TCP port, we can just run Delve (in step 6) with the same port as a param and know they should connect just fine.  I had some issues with apiVersion 1, so I'm using v2 here.  showLog and trace just adds some output on the debug process to the Debug Console within VSCode.
 
 remotePath needs to be path to the executable.  Because my VSCode workspace is open at the root of the GitHub repository, and that's where the compiled binary is, `${workspaceFolder}` works great.
 
@@ -89,6 +89,10 @@ You're free to set breakpoints as you see fit and have a good old inspect of wha
 ---
 ### Have Fun
 
-That's it really.  I wanted to create this guide because to get to this point I had to piece together information from all across the internet and somehow pick out the relevant bits.  There was a lot of trial and error involved.  Hopefully this guide will help someone out there.
+That's it really.
+
+I wanted to create this guide because to get to this point I had to piece together information from all across the internet and somehow pick out the relevant bits.  There was a lot of trial and error (and headscratching) involved.
+
+Hopefully this guide will help someone somewhere.
 
 ---
