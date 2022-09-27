@@ -58,7 +58,7 @@ Within [orchestrated_virtual_machine_scale_set_resource.go](https://github.com/h
 
 resourceOrchestratedVirtualMachineScaleSetCreate() takes two arguments, 'd' takes a pointer to a type of `pluginsdk.ResourceData`, while 'meta' will accept types of `interface{}`.  Essentially, d is where the contents from our Terraform config are fed into the function.  I'm not a huge fan of Go's preference for single letter variables as function arguments, but that's just me.
 
-On [line 233](https://github.com/hashicorp/terraform-provider-azurerm/blob/5fd32b3b3cf8a4a1891dee79e8890a125a2f36ce/internal/services/compute/orchestrated_virtual_machine_scale_set_resource.go#L233), our provider starts building up a variable for our resource called `props`, this is an instance of type `compute.VirtualMachineSccaleSet` which itself is a Go `struct`.  A struct is _sort_ of like a class in that it is a defined list of property names and value types, but seeing as Go is _not_ object orientated, there are no constructors or methods attached to a struct.  But in plain English, it's a blueprint for _'a thing'_.
+On [line 233](https://github.com/hashicorp/terraform-provider-azurerm/blob/5fd32b3b3cf8a4a1891dee79e8890a125a2f36ce/internal/services/compute/orchestrated_virtual_machine_scale_set_resource.go#L233), our provider starts building up a variable for our resource called `props`, this is an instance of type `compute.VirtualMachineScaleSet` which itself is a Go `struct`.  A struct is _sort_ of like a class in that it is a defined list of property names and value types, but seeing as Go is _not_ object orientated, there are no constructors or methods attached to a struct.  But in plain English, it's a blueprint for _'a thing'_.
 
 ![Props](/img/Props_01.png)
 
@@ -135,7 +135,7 @@ This feels like the correct way to populate the `sourceImageReference`.
 
 It seemed to me that the sensible thing to do would be to replace the faulty function call within _orchestrated_virtual_machine_scale_set_resource.go_ with a call to `expandSourceImageReference()` within _shared_schema.go_  and include the same error handling as we saw for the Linux VMSS resource (remember, the original function call only returned an ImageReference type, not an error as well).
 
-I did this on commit [19cb84f of my fork](https://github.com/hashicorp/terraform-provider-azurerm/commit/19cb84f2f0c43fd26ee98fb65c7b27e9d1bb16a0) of the provider repo, recompiled the source code, started it back up in debug mode, and is if by magic, Terraform was able to populate the missing object for the JSON request body, and created my Flexible VMSS without a hitch!
+I did this on commit [19cb84f of my fork](https://github.com/hashicorp/terraform-provider-azurerm/commit/19cb84f2f0c43fd26ee98fb65c7b27e9d1bb16a0) of the provider repo, recompiled the source code, started it back up in debug mode, and as if by magic, Terraform was able to populate the missing object for the JSON request body, and created my Flexible VMSS without a hitch!
 
 ---
 ### End Result
