@@ -1,5 +1,5 @@
 ---
-title: "Django Caching Pattern in Redis"
+title: "Django Caching Pattern for Redis"
 date: 2022-10-12T07:59:34+01:00
 draft: false
 description: "Why I cache certain data from Django in Redis and the pattern I tend to use for consistent results"
@@ -7,7 +7,7 @@ keywords: ["Django", "Django Web Framework", "Caching", "Cache", "Redis"]
 tags: ["Django", "Redis"]
 ---
 
-> Caching data which doesn't often change can bring massive performance benefits - let's look at how and why
+> Caching data which doesn't often change can bring massive performance benefits - let's look at how we can do this effectively in Django
 
 ### Why Redis?
 
@@ -39,7 +39,7 @@ I offer a few different scoretables, one of which, the 'Enhanced' scoretable, sh
 
 This data is sourced from 3 tables (User, ScoreWeek, and ScoreSeason) and is enumerated by running a `for` loop on all entries in the ScoreSeason table (there is one entry per active user) - so it takes a little while for all of this data to be returned.
 
-The data is sent to the front as a python dictionary, which the template turns into a JSON object with the [json-script filter](https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#json-script), so it can be displayed in a VueJS component which allows users to sort on any columns they wish, amongst other things.
+The data is sent to the front-end as a python dictionary, which the template turns into a JSON object with the [json-script filter](https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#json-script), so it can be displayed in a VueJS component which allows users to sort on any columns they wish, amongst other things.
 
 > ##### "Because this data has been pulled from the database and serialized, and it **doesn't change** for a week, that makes it a prime candidate for caching!" {#fiskquotestrong .fiskblockquotehighlighted}
 
