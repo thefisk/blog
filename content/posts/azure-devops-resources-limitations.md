@@ -2,12 +2,12 @@
 title: "Azure Devops Resources Limitations"
 date: 2023-05-08T16:33:18+01:00
 draft: false
-description: "Exploring the undocumentated limitations on Azure DevOps pipeline resources"
+description: "Exploring the undocumented limitations on Azure DevOps pipeline resources"
 keywords: ["Azure DevOps", "DevOps", "ADO", "AzDo", "Pipeline", "Service Connections", "Checks"]
 tags: ["Azure", "DevOps"]
 ---
 
-_The documentation around Azure DevOps can be somewhat lacking, particularly if you find yourself debugging an issue in production. In this post I'll explain one of the undocumentated limitations that took several months for Microsoft to get to the bottom of and caused me a major headache in the process._
+_The documentation around Azure DevOps can be somewhat lacking, particularly if you find yourself debugging an issue in production. In this post I'll explain one of the undocumented limitations that took several months for Microsoft to get to the bottom of and caused me a major headache in the process._
 
 ### Setting the Scene
 
