@@ -10,7 +10,7 @@ jobs:
   build:
     name: Build and Deploy
     # Doesn't use latest Ubuntu as it breaks S3 sync command
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout Repos
         uses: actions/checkout@v1
