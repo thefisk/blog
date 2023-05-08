@@ -17,7 +17,7 @@ At my place of work, as a platform team, we deploy platform resources into Azure
 
 On top of this, we make use of [branch control checks](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops&tabs=check-pass#branch-control) to ensure we can only deploy from our main branch.  This ensures relevant PR checks have all been completed and that no "rogue code" can be deployed.
 
-A while ago though, we experienced a strange bug in Azure DevOps.  When trying to deploy to our dev spokes (from our main branch) we were greeted with the below error.
+A while ago though, we experienced a strange bug in Azure DevOps.  When trying to deploy to our dev spokes (from our main branch) we were greeted with the below error: -
 
 `##[error]The job is using protected resource(s) for which checks have not been evaluated endpoint: [service endpoint name(s)]. For more details, refer to https://aka.ms/pipelinechecks.`
 
