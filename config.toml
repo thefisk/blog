@@ -6,7 +6,6 @@ enableInlineShortcodes = true
 
 summarylength = 10
 enableEmoji = true
-disqusShortname = 'nathanfisk'
 
 [params]
 author = "Nathan Fisk"
@@ -65,6 +64,10 @@ customJs = ["js/blog.js"]
   weight = 300
   url = "/about/"
 
+[services]
+  [services.disqus]
+    shortname = "nathanfisk"
+    
 [taxonomies]
   category = "categories"
   series = "series"
