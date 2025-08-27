@@ -15,7 +15,7 @@ I've been a fairly happy Heroku customer for nearly 6 years but it's not without
 
 On top of this, each worker process (in Heroku speak, "Dynos") carried individual monthly costs.  So by having a web server process _and_ a Celery worker, that meant twice the dyno costs - had I separated out Celery Beat (as is best practice), that would have incurred a third cost.  That's before you take into account costs for Redis and PostGres...so you can see why, for small projects, costs can quickly escalate.
 
-What I will see in Heroku's defence, is that their PostGres plans were actually quite competitive and one of the reasons I stuck with them after the free tier was killed.
+What I will see in Heroku's defence, is that their PostGres plans were actually quite competitive and one of the reasons I stuck with them after the free tier was killed.  Heroku, once upon a time, was the darling of Django devs - it did undeniably make deployments easy, but are there better solutions in 2025?
 
 ### Self Hosting is a Nightmare Though
 
