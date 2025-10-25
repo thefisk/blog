@@ -1,7 +1,7 @@
 ---
 title: "Goodbye Heroku, Hello Appliku"
-date: 2025-08-27T17:30:00+01:00
-draft: true
+date: 2025-10-25T12:30:00+01:00
+draft: false
 description: "Migrating away from Heroku to Appliku"
 keywords: ["Django", "Heroku", "Appliku"]
 tags: ["Django"]
