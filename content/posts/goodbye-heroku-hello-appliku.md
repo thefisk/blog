@@ -7,17 +7,17 @@ keywords: ["Django", "Heroku", "Appliku"]
 tags: ["Django"]
 ---
 
-> After 5+ years of Heroku hosting, PigskinPredictor is moving to a new home with thanks to Appliku
+> After 5+ years of Heroku hosting, PigskinPredictor has moved to a new home with thanks to Appliku
 
 ### Why Move Away From a Tried and Tested Solution?
 
-I've been a fairly happy Heroku customer for nearly 6 years but it's not without its challenges for a small project like mine - namely cost!  Prior to November 2022, Heroku had a free tier - which meant I was able to spin up test instances of my project from a feature branch and have others access and test things out as if it were live. That all went away, which was a massive shame.
+I've been a fairly happy Heroku customer for nearly 6 years but it's not without its challenges for a small project like mine - namely cost 😄 Prior to November 2022, Heroku had a free tier - which meant I was able to spin up test instances of my project from a feature branch and have others access and test things out as if it were live. That all went away though, which was a massive shame, and meant I could only really test locally (which wasn't a true representation of live), or push changes to my live environment and keep my fingers crossed. Neither of these were ideal.
 
 On top of this, each worker process (in Heroku speak, "Dynos") carried individual monthly costs.  So by having a web server process _and_ a Celery worker, that meant twice the dyno costs - had I separated out Celery Beat (as is best practice), that would have incurred a third cost.  That's before you take into account costs for Redis and PostGres...so you can see why, for small projects, costs can quickly escalate.
 
-What I will see in Heroku's defence, is that their PostGres plans were actually quite competitive and one of the reasons I stuck with them after the free tier was killed.  Heroku, once upon a time, was the darling of Django devs - it did undeniably make deployments easy, but are there better solutions in 2025?
+What I will say in Heroku's defence, is that their PostGres plans were actually quite competitive and one of the reasons I stuck with them after the free tier was killed.  Heroku, once upon a time, was the darling of Django devs - it did undeniably make deployments easy, but are there better solutions in 2025?
 
-### Self Hosting is a Nightmare Though
+### Self Hosting is a Nightmare Though 🤔
 
 As mentioned before, one of the benefits of a PaaS offering like Heroku is that it abstracts server management away from you, which is an absolute God send. But self-hosting is undeniably the more cost effective solution. So how do you reconcile these two things? Can you self-host but keep deployments simple and abstract away the management?
 
@@ -33,16 +33,18 @@ In fact, there's a very easy-to-use Postgres Import panel so you can move your v
 
 Appliku also handles your TLS certificates for you, configures your clients' SSH keys on your server, provides server hardware metrics, allows for easy database backups...the list goes on.
 
-One of the features I love is that you can define your application in YAML ([doc](https://appliku.com/guides/yml/)) - so all of your Docker services, your Cronjobs, your Database versioning, Env Vars can be defined and changes tracked in your project's source code - this means that when you deploy that test app from a feature branch, you can guarantee it'll be configured _exactly_ like production.
+One of the features I love is that you can define your application in YAML ([doc](https://appliku.com/guides/yml/)) - so all of your Docker services, your Cronjobs, your Database versioning, Env Vars... can all be defined and changes tracked in your project's source code - this means that when you deploy that test app from a feature branch, you can guarantee it'll be configured _exactly_ like production.
 
 ### Why I'm Sold on Appliku
 
 On top of the above technical reasons, I've found the support through Discord to be fantastic - rarely having to wait more than a few minutes to get a response and solution to a query.
 
-As a solo developer, I love that I can leverage Appliku to overcome those cost barriers I previously faced while keeping management effort to a bare minimum.  I now have Celery and Beat components running separately, but that's just the start.  If I want to spin up extra services I can do so at zero cost.  All the while _massively_ reducing latency as these services are all running alongside each other.  I can also now deploy test instances to the same server for no extra cost.
+As a solo developer, I love that I can leverage Appliku to overcome those cost barriers I previously faced while keeping management effort to a bare minimum.  I now have Celery and Beat components running separately, but that's just the start.  If I want to spin up extra services I can do so at zero cost.  All the while _massively_ reducing latency as these services are all running alongside each other.  I can also now deploy test instances (or even completely separate applications) to the same server for no extra cost.
 
 ### I'm a Happy Bunny
 
 There's a definite learning curve to both configuring your project and getting used to managing it slightly differently, but so far, I haven't seen any tangible downsides to be honest.
 
-As a final note (and without wanting to get too political) it's nice to be able to support a smaller European project rather than fill the pockets of an American Goliath.
+Appliku's [costs](https://appliku.com/pricing) are fair in my opinion, and actually, given the flexibility and support, pretty good value - especially if you have more projects to support - that's where the true value comes in.
+
+As a final note (and without wanting to get too political) it's nice to be able to support a smaller European project rather than fill the pockets of an American Goliath (Heroku was purchased by Salesforce in 2010).
