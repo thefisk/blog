@@ -60,6 +60,6 @@ It's long been acknowledged that you should use a different password for every s
 ---
 ### Summary
 
-The process of swapping out all of my registered emails (well, most...is it ever _truly_ done?) took several weeks and was very tedious but the benefits have definitely been worth it for me. I feel much more organised and am very happy to have stoped giving Google so much of my personal data. But overall I just feel a lot happier with how I use email now - the shared subdomain is super useful and makes managing household things so much easier (especially as the logins are stored in a Proton Pass vault which I share with my wife).
+The process of swapping out all of my registered emails (well, most...is it ever _truly_ done?) took several weeks and was very tedious but the benefits have definitely been worth it for me. I feel much more organised and am very happy to have stopped giving Google so much of my personal data. But overall I just feel a lot happier with how I use email now - the shared subdomain is super useful and makes managing household things so much easier (especially as the logins are stored in a Proton Pass vault which I share with my wife).
 
 So yeah, it's taken a while to land on a setup I'm happy with but I feel like the new setup will hopefully serve me well for the next 20+ years, like Gmail did...before it didn't.
