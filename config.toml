@@ -1,5 +1,5 @@
 baseURL = "https://nathanfisk.co.uk"
-languageCode = "en-gb"
+locale = "en-GB"
 title = "Nathan Fisk"
 theme = "soho_fork"
 enableInlineShortcodes = true

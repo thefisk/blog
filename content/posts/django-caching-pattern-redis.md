@@ -55,7 +55,7 @@ What I like to do when caching data to be used as context, is: -
 
 This can all be seen in the below gist, which is a snippet taken from the example discussed above
 
-{{< gist thefisk ed3febf9516ef133f60f09ace7664adf >}}
+{{< og_gist thefisk ed3febf9516ef133f60f09ace7664adf >}}
 
 One other thing I like to do, is to clear all of my caches when the app restarts.  This is done by adding an AppConfig for the application in question and add a custom ready() function as shown [here](https://github.com/thefisk/pigskinpredictor/blob/cc21bcf50570e1e56037680b06a6b6758df75b2b/predictor/apps.py#L10)
 

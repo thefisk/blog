@@ -25,7 +25,7 @@ By default, Terraform (by which I mean the AzureRM provider) will reinstate a Ke
 
 With this autorecovery by default comes a potential issue.  When a Key Vault is recovered from Soft Delete, its secrets are also restored.  This means that in the below example configuration, `azurerm_key_vault_secret.my_secret` would fail to deploy because it already exists and this error could potentially break your deployment pipelines.
 
-{{< gist thefisk 9fd745ef5f2a7325e502bab6f5b98cc2 >}}
+{{< og_gist thefisk 9fd745ef5f2a7325e502bab6f5b98cc2 >}}
 
 ---
 ### Terraform Ways Around This...

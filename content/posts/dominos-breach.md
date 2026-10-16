@@ -50,7 +50,8 @@ My Domino's login is dominos-[random-6-digits]@subdomain.mycustomdomain.com (and
 
 And my *previous* password is `ftD%hRA5r*uybEHq&6QS` - 20 random digits.
 
-![Thinking" class="memegif](/img/cat_thinking.gif){.myclass}
+![Thinking" class="memegif](/img/cat_thinking.gif)
+{.memegif}
 
 > ##### Well, as I suspected - no, neither of these show up on HaveIBeenPwned {.fiskblockquotehighlighted}
 

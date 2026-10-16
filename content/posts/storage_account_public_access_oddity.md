@@ -23,7 +23,7 @@ It's best practice to make your Azure Storage Accounts as secure as you can and 
 
 To disable Blob public access within Terraform is simply a case of finding your [AzureRM_Storage_Account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) and setting allow_blob_public_access to false as shown in line 8 below: -
 
-{{< gist thefisk 941f0884ff6530ec1246bf97187949e3 >}}
+{{< og_gist thefisk 941f0884ff6530ec1246bf97187949e3 >}}
 
 However, in my real world situation, the setting didn't want to apply. I noticed something I'd never seen before as well; after running a Terraform Apply, and inspecting the state file, the Storage Account resource showed as having the setting set to false, as per my Terraform configuration. This was in conflict with the actual resource though, which had Blob public access still enabled!  Furthermore, a subsequent Terraform Plan/Apply seemed to think everything was hunky-dory. What gives?
 

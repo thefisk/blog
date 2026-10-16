@@ -28,11 +28,11 @@ In the image below, the argument we need to pass in for --workspace is "982a8281
 
 Checking the JSON View provides some clues; confusingly it is the 'customerId' of the resource, as shown below: -
 
-{{< gist thefisk 263a73df240109a16e5128161d950508 >}}
+{{< og_gist thefisk 263a73df240109a16e5128161d950508 >}}
 
 With this information, we can find the Workspace ID/customerId by using [az monitor log-analytics workspace show](https://docs.microsoft.com/en-us/cli/azure/monitor/log-analytics/workspace?view=azure-cli-latest#az-monitor-log-analytics-workspace-show) (assuming we have firstly set the active subscription, know the resource group name, and know the LAW name).  This is displayed below on lines 5 and 8, where we get the properties of the Workspace and extract the ID.  Piping to convertfrom-json simply takes the JSON returned data and converts it to a PowerShell object.
 
-{{< gist thefisk a7c269080fe0149ec6bb9b3222453b0b >}}
+{{< og_gist thefisk a7c269080fe0149ec6bb9b3222453b0b >}}
 
 From there, you can run whatever KQL query/queries you wish.  Again on line 11 I'm piping to convertfrom-json to store the results as a PowerShell object.  On line 14 I add a new property to help me distinguish which subscription each set of results relate to.
 

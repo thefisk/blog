@@ -38,11 +38,11 @@ In March, GitHub user evandeworp added [this](https://github.com/hashicorp/terra
 
 Following the steps laid out in my [previous post](../debugging-azurerm-terraform-provider) I set up an environment to debug the issue.  The first thing I did when debugging was to verify _evandeworp's_ comment about missing data in the PUT request.  In the terminal in which the provider was running, I noticed (among a wall of text) something that looked like an HTTP request as below: -
 
-{{< gist thefisk b4b8942694a4aea58e5e81110f760f96 >}}
+{{< og_gist thefisk b4b8942694a4aea58e5e81110f760f96 >}}
 
 Removing the headers and all forward slashes from the request revealed the much more digestable JSON body below.  storageProfile, on line 21, is indeed missing the imageReference object, despite it being included in the .tf file.
 
-{{< gist thefisk c7fc43ec4285a03b491401ed36c5aca0 >}}
+{{< og_gist thefisk c7fc43ec4285a03b491401ed36c5aca0 >}}
 
 ---
 ### Source Code Structure

@@ -20,7 +20,7 @@ jobs:
           tar xvzf hugo_extended_0.127.0_Linux-64bit.tar.gz hugo
           mv hugo $HOME/hugo
         env:
-          HUGO_VERSION: 0.127.0
+          HUGO_VERSION: 0.168.0
       - name: Hugo Build
         run: $HOME/hugo -v
       - name: Deploy to S3
