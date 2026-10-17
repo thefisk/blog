@@ -50,10 +50,11 @@ My Domino's login is dominos-[random-6-digits]@subdomain.mycustomdomain.com (and
 
 And my *previous* password is `ftD%hRA5r*uybEHq&6QS` - 20 random digits.
 
-![Thinking" class="memegif](/img/cat_thinking.gif)
-{.memegif}
+> #### Sends cat to HaveIBeenPwned... {.fiskblockquotelight}
 
-> ##### Well, as I suspected - no, neither of these show up on HaveIBeenPwned {.fiskblockquotehighlighted}
+<img src="/img/cat_thinking.gif" alt="Thinking" class="memegif">
+
+> #### Ah! As I suspected - no, neither of these show up on HaveIBeenPwned {.fiskblockquotelight}
 
 ---
 ### Upshot
@@ -62,13 +63,13 @@ So, given all of the above, I feel very confident in saying that my credentials 
 
 Which raises the question - are Domino's lying or simply incompetent?
 
-This is a genuine question. If my account was accessed by someone other than me, then the only reasonable source of those details is Domino's themselves.
+That might sound facetious, but I'm genuinely curious. If my account was accessed by someone other than me, then the only reasonable source of those details is Domino's themselves - i.e. they're lying.
 
-If Domino's _wasn't_ breached then my credentials _haven't_ been accessed - and so the email has been sent to me in error.
-
-Now, it's possible that maybe they could have taken the stance that they would like everyone to change their password as a precaution - but that's not what the email says.
+If Domino's _wasn't_ breached then my credentials _haven't_ been accessed - and so the email was either sent in error, or __really__ badly worded* - i.e. they're incompetent.
 
 So again, clearly something is wrong here, whether intentionally or not.
+
+###### *It is possible that maybe they could have taken the stance that they would like everyone to change their password as a precaution - but that's not what the email says. {.smaller}
 
 ---
 ### Broader Picture
