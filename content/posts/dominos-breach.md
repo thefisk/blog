@@ -1,7 +1,7 @@
 ---
 title: "Dominos Breach - Dishonesty or Incompentence?"
 date: 2026-10-14T12:45:27+01:00
-draft: true
+draft: false
 description: "A review of a recent security disclosure of Domino's UK & Ireland and its accuracy"
 keywords: ["security", "hack", "breach", "account", "dominos"]
 tags: ["security", "news"]
