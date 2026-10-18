@@ -3,7 +3,7 @@ title: "Domino's Breach - Dishonesty or Incompetence?"
 date: 2026-10-14T12:45:27+01:00
 draft: false
 description: "A review of a recent security disclosure of Domino's UK & Ireland and its accuracy"
-keywords: ["security", "hack", "breach", "account", "dominos"]
+keywords: ["security", "hack", "breach", "account", "domino's"]
 tags: ["security", "news"]
 ---
 
@@ -16,7 +16,7 @@ At 16:16 BST on Tuesday my phone pinged to say I had an email. Nothing unusual t
 TL;DR - I don't believe Domino's. Read on to find why...
 
 {{< details summary="Click for Email Screenshot" >}}
-![Dominos Email](/img/dominos_email.png)
+![Domino's Email](/img/dominos_email.png)
 {{< /details >}}
 
 ___
@@ -30,7 +30,7 @@ I've previously detailed in this [blog post](../taking-back-my-inbox-2025) how I
 
 One of the benefits of doing this is that it means I have a 1:1 relationship between login ID and service. This means that [credential stuffing attacks](https://community.owasp.org/attacks/Credential_stuffing) should be impossible.
 
-On top of that, the source of breaches can be tracked even when they're not reported and that I can consequently disable that email alias if I need to - say it starts receing all sorts of spam; I can just cut it off at the source.
+On top of that, the source of breaches can be tracked even when they're not reported and that I can consequently disable that email alias if I need to - say it starts receiving all sorts of spam; I can just cut it off at the source.
 
 ### Where Are These Stored?
 
@@ -47,7 +47,7 @@ All of that is to say, I don't believe it's likely that my Domino's credentials 
 
 ### Have I (actually) Been Pwned?
 
-Let's do a quick check on [haveibeenpwnd?](https://haveibeenpwned.com)
+Let's do a quick check on [haveibeenpwned?](https://haveibeenpwned.com)
 
 My Domino's login is `dominos-[random-6-digits]@subdomain.mycustomdomain.com` (it's not _this_ domain 😉) - and remember, this has only been used to log in to Domino's.
 
