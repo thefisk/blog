@@ -22,7 +22,7 @@ jobs:
         env:
           HUGO_VERSION: 0.168.0
       - name: Hugo Build
-        run: $HOME/hugo -v
+        run: $HOME/hugo --logLevel info
       - name: Deploy to S3
         run: aws s3 sync public/ s3://${{ secrets.AWS_BUCKET_NAME }}/ --delete
         env:
