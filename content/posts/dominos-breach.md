@@ -1,5 +1,5 @@
 ---
-title: "Dominos Breach - Negligence or Incompentence?"
+title: "Dominos Breach - Dishonesty or Incompentence?"
 date: 2026-10-14T12:45:27+01:00
 draft: true
 description: "A review of a recent security disclosure of Domino's UK & Ireland and its accuracy"
@@ -64,11 +64,11 @@ And my *previous* password is `ftD%hRA5r*uybEHq&6QS` - 20 random digits I have n
 
 So, given all of the above, I feel very confident in saying that my credentials for my Domino's login were not found in another site's breach.
 
-Which raises the question - are Domino's lying or simply incompetent?
+Which raises the question - are Domino's being dishonest or just incompetent?
 
-That might sound facetious, but I'm genuinely curious. If my account was accessed by someone other than me, then the only reasonable source of those details is Domino's themselves - i.e. they're lying.
+That might sound facetious, but I'm genuinely curious. If my account was accessed by someone other than me, then the only reasonable source of those details is Domino's themselves - i.e. they're being economical with the truth.
 
-If Domino's _wasn't_ breached then my credentials _haven't_ been accessed - and so the email was either sent in error, or __really__ badly worded* - i.e. they're incompetent.
+If Domino's itself _wasn't_ breached then my credentials almost certainly _haven't_ been accessed - and so the email was either sent in error, or __really__ badly worded* - i.e. they're incompetent.
 
 So again, clearly something is wrong here, whether intentionally or not.
 
