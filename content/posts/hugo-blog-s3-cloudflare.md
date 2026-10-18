@@ -29,7 +29,7 @@ Luckily, none of this madness was needed because with Cloudflare, all I had to d
 
 This blog is hosted on a public Git repository on GitHub and as such, I have included a YAML file that will run a Hugo build process when an update is pushed to the main branch, and then deploy the resulting static files to my S3 bucket. I did have a few minor issues getting this to work which I have added comments in the YAML file below to address. A big one though which showed up in a lot of Google searches was caused by having my selected theme as a submodule in Git. By default, the checkout process won't add submodules so a lot of the files simply weren't generated. This was fixed by adding the setting on line 19.
 
-{{< gist thefisk 7432eb4d478d90a34127571692da8ae0 >}}
+{{< og_gist thefisk 7432eb4d478d90a34127571692da8ae0 >}}
 
 ---
 ### TLS

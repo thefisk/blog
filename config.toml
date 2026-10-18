@@ -1,5 +1,5 @@
 baseURL = "https://nathanfisk.co.uk"
-languageCode = "en-gb"
+locale = "en-GB"
 title = "Nathan Fisk"
 theme = "soho_fork"
 enableInlineShortcodes = true
@@ -74,6 +74,14 @@ customJs = ["js/blog.js"]
   tag = "tags"
 
 [markup]
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        enable = true
 
   [markup.highlight]
   codeFences = true

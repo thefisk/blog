@@ -42,12 +42,12 @@ The below scripts can then be used to find the tag values from the Azure Instanc
 
 #### Python
 
-{{< gist thefisk c95561593218493382dc73ba661359b0 >}}
+{{< og_gist thefisk c95561593218493382dc73ba661359b0 >}}
 
 ---
 #### PowerShell
 
-{{< gist thefisk 89ed48a76f77ba1a11348ce7851e1459 >}}
+{{< og_gist thefisk 89ed48a76f77ba1a11348ce7851e1459 >}}
 
 ---
 ### Conclusion

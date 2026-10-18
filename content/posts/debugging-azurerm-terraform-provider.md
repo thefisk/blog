@@ -38,7 +38,7 @@ Once that is done, it will need to be compiled with some special flags.  To do s
 
 Debugging can be done in numerous ways.  With compiled code though, we can either launch a process or attach to a running process.  As we'll be using Delve to initialise the process, we'll want to do the latter. Within VSCode you'll need to create a config file which allows for this to happen.  There are a myriad of options you can add to your launch.json file, but I have found the below to work best.
 
-{{< gist thefisk a3d9fddbc05daa80a399a6069450429d >}}
+{{< og_gist thefisk a3d9fddbc05daa80a399a6069450429d >}}
 
 By specifying a target TCP port, we can just run Delve (in step 6) with the same port as a param and know they should connect just fine.  I had some issues with apiVersion 1, so I'm using v2 here.  showLog and trace just adds some output on the debug process to the Debug Console within VSCode.
 
